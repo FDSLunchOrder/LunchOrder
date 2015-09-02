@@ -1,0 +1,1340 @@
+  [1m[36m (2.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'lunch_dev'
+  AND fk.table_name = 'accounts'
+[0m
+  [1m[35m (2.0ms)[0m  SHOW CREATE TABLE `accounts`
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-25 18:38:14 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (22.0ms)
+Completed 200 OK in 163ms (Views: 126.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 10:09:52 +0800
+
+LoadError (cannot load such file -- tiny_tds):
+  activesupport (4.2.3) lib/active_support/dependencies.rb:274:in `require'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:274:in `block in require'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:240:in `load_dependency'
+  activesupport (4.2.3) lib/active_support/dependencies.rb:274:in `require'
+  activerecord-sqlserver-adapter (4.2.4) lib/active_record/sqlserver_base.rb:10:in `sqlserver_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  C:/Ruby21-x64/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  C:/Ruby21-x64/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (128.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 10:13:31 +0800
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (22.0ms)
+Completed 200 OK in 176ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (5.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36m (42.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''accounts'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (4.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'accounts', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''account'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (4.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (4.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'account', NULL
+  [1m[36mExecute Procedure (1.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL[0m
+  [1m[35mExecute Procedure (1.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''[0m
+  [1m[35m (2.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''account'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (2.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (1.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'account', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL[0m
+  [1m[35mExecute Procedure (3.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL[0m
+  [1m[35mExecute Procedure (3.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL
+  [1m[36mSQL (1.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (4.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''account'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'account', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL[0m
+  [1m[35mExecute Procedure (3.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+Migrating to CreateCreateAccounts (20150828065008)
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN TRANSACTION[0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE [create_accounts] ([id] int NOT NULL IDENTITY(1,1) PRIMARY KEY, [FirstName] nvarchar(4000), [LastName] nvarchar(4000), [Active] bit, [Location] nvarchar(4000), [Login] nvarchar(4000), [Debt] smallmoney, [Need_Reminder] bit, [User_Gp] integer, [created_at] datetime NOT NULL, [updated_at] datetime NOT NULL) 
+  [1m[36mSQL (50.0ms)[0m  [1mEXEC sp_executesql N'INSERT INTO [schema_migrations] ([version]) VALUES (@0); SELECT CAST(SCOPE_IDENTITY() AS bigint) AS Ident', N'@0 nvarchar(4000)', @0 = N'20150828065008'[0m  [["version", "20150828065008"]]
+  [1m[35mSQL (2.0ms)[0m  COMMIT TRANSACTION
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''
+  [1m[36m (2.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''account'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''create_accounts'''
+  [1m[36m (5.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (4.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'account', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'create_accounts', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL[0m
+  [1m[35mExecute Procedure (3.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 14:57:08 +0800
+  [1m[36mSQL (3.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (29.0ms)
+Completed 200 OK in 170ms (Views: 134.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 14:57:26 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 14:57:26 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36m (4.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''account'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''create_accounts'''[0m
+  [1m[35m (2.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''foods'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''
+  [1m[36m (2.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'account', NULL[0m
+  [1m[35mExecute Procedure (1.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'create_accounts', NULL
+  [1m[36mExecute Procedure (1.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL[0m
+  [1m[35mExecute Procedure (1.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+Migrating to Account (20150828070221)
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN TRANSACTION[0m
+  [1m[35m (3.0ms)[0m  DROP TABLE [account]
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE [account] ([ID] int NOT NULL IDENTITY(1,1) PRIMARY KEY, [FirstName] nvarchar(4000), [LastName] nvarchar(4000), [Active] bit, [Location] nvarchar(4000), [Login] nvarchar(4000), [Debt] smallmoney, [Need_Reminder] bit, [User_Gp] integer, [created_at] datetime, [updated_at] datetime) [0m
+  [1m[35mSQL (2.0ms)[0m  EXEC sp_executesql N'INSERT INTO [schema_migrations] ([version]) VALUES (@0); SELECT CAST(SCOPE_IDENTITY() AS bigint) AS Ident', N'@0 nvarchar(4000)', @0 = N'20150828070221'  [["version", "20150828070221"]]
+  [1m[36mSQL (3.0ms)[0m  [1mCOMMIT TRANSACTION[0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36m (5.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''account'''
+  [1m[36m (4.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''create_accounts'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''foods'''
+  [1m[36m (2.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'account', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'create_accounts', NULL
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL[0m
+  [1m[35mExecute Procedure (3.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL
+  [1m[36mSQL (1.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mEXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''account'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''foods'''
+  [1m[36m (2.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''
+  [1m[36m (2.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''[0m
+  [1m[35mExecute Procedure (3.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL
+  [1m[36mExecute Procedure (1.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'account', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL
+  [1m[36mExecute Procedure (1.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 15:44:41 +0800
+  [1m[36mSQL (1.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+Processing by AccountController#index as HTML
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant AccountController::Accounts):
+  app/controllers/account_controller.rb:3:in `index'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (33.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 15:44:56 +0800
+Processing by AccountController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant AccountController::Accounts):
+  app/controllers/account_controller.rb:3:in `index'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 15:44:56 +0800
+Processing by AccountController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant AccountController::Accounts):
+  app/controllers/account_controller.rb:3:in `index'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (28.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (64.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 15:44:57 +0800
+Processing by AccountController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant AccountController::Accounts):
+  app/controllers/account_controller.rb:3:in `index'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 15:45:26 +0800
+Processing by AccountController#index as HTML
+  Rendered account/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 0.0ms)
+
+SyntaxError (F:/Public/Development (lunch program)/app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...=( link to 'Edit', edit account path(acount) );@output_buffe...
+...                               ^
+F:/Public/Development (lunch program)/app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...link to 'New Account', new user path );@output_buffer.safe_a...
+...                               ^):
+  app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (95.0ms)
+
+
+Started POST "/console/repl_sessions/81f7728a6a2141edee9352ea1c8e95dc/trace" for 127.0.0.1 at 2015-08-28 15:45:45 +0800
+  [1m[36mSQL (1.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[36mSQL (1.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mEXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''account'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''foods'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''[0m
+  [1m[35mExecute Procedure (1.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'account', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL[0m
+  [1m[35mExecute Procedure (1.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL
+  [1m[36mExecute Procedure (1.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 15:59:02 +0800
+Processing by AccountController#index as HTML
+  Rendered account/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 0.0ms)
+
+SyntaxError (F:/Public/Development (lunch program)/app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...=( link to 'Edit', edit account path(acount) );@output_buffe...
+...                               ^
+F:/Public/Development (lunch program)/app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...link to 'New Account', new user path );@output_buffer.safe_a...
+...                               ^):
+  app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.0ms)
+
+
+Started POST "/console/repl_sessions/ac067954e16493d3651e6b04a7ca5bf7/trace" for 127.0.0.1 at 2015-08-28 15:59:48 +0800
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+Migrating to CreateAccounts (20150828080611)
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN TRANSACTION[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE [accounts] ([id] int NOT NULL IDENTITY(1,1) PRIMARY KEY, [FirstName] nvarchar(4000), [LastName] nvarchar(4000), [Active] bit, [Location] nvarchar(4000), [Login] nvarchar(4000), [Debt] smallmoney, [Need_Reminder] bit, [User_Gp] integer, [created_at] datetime NOT NULL, [updated_at] datetime NOT NULL) 
+  [1m[36mSQL (2.0ms)[0m  [1mEXEC sp_executesql N'INSERT INTO [schema_migrations] ([version]) VALUES (@0); SELECT CAST(SCOPE_IDENTITY() AS bigint) AS Ident', N'@0 nvarchar(4000)', @0 = N'20150828080611'[0m  [["version", "20150828080611"]]
+  [1m[35mSQL (1.0ms)[0m  COMMIT TRANSACTION
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mEXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''account'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''accounts'''
+  [1m[36m (2.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (18.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'account', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'accounts', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 16:37:57 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (9.0ms)[0m  [1mEXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'[0m
+Processing by AccountController#index as HTML
+  Rendered account/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.0ms)
+
+SyntaxError (F:/Public/Development (lunch program)/app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...=( link to 'Edit', edit account path(acount) );@output_buffe...
+...                               ^
+F:/Public/Development (lunch program)/app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...link to 'New Account', new user path );@output_buffer.safe_a...
+...                               ^):
+  app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (61.0ms)
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+
+
+Started POST "/console/repl_sessions/7e33b1a65e10aaf1d021941db0a0c2c9/trace" for 127.0.0.1 at 2015-08-28 16:40:02 +0800
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 16:40:17 +0800
+Processing by AccountController#index as HTML
+  Rendered account/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.0ms)
+
+SyntaxError (F:/Public/Development (lunch program)/app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...=( link to 'Edit', edit account path(acount) );@output_buffe...
+...                               ^
+F:/Public/Development (lunch program)/app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...link to 'New Account', new user path );@output_buffer.safe_a...
+...                               ^):
+  app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 16:40:40 +0800
+Processing by AccountController#index as HTML
+  Rendered account/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 0.0ms)
+
+SyntaxError (F:/Public/Development (lunch program)/app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...=( link to 'Edit', edit account path(account) );@output_buff...
+...                               ^
+F:/Public/Development (lunch program)/app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...link to 'New Account', new user path );@output_buffer.safe_a...
+...                               ^):
+  app/views/account/index.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (88.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 16:43:13 +0800
+Processing by AccountController#index as HTML
+  Rendered account/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 0.0ms)
+
+SyntaxError (F:/Public/Development (lunch program)/app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...link to 'New Account', new user path );@output_buffer.safe_a...
+...                               ^):
+  app/views/account/index.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (83.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 16:43:56 +0800
+Processing by AccountController#index as HTML
+  [1m[35mAccount Load (3.0ms)[0m  EXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'
+  Rendered account/index.html.erb within layouts/application (59.0ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 27.0ms)
+
+ActionView::Template::Error (undefined local variable or method `new_user_path' for #<#<Class:0x00000008edd9a8>:0x000000090aef48>):
+    34:   <% end %>
+    35: </table>
+    36: <br />
+    37: <%= link to 'New Account', new_user_path %>
+  app/views/account/index.html.erb:37:in `_app_views_account_index_html_erb___1858444754_75851060'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (73.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 16:44:54 +0800
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (4.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 8000ms (Views: 7995.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/account.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-28 16:45:02 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-28 16:45:02 +0800
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-28 16:45:02 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-28 16:45:02 +0800
+
+
+Started GET "/assets/account.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-28 16:45:03 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-28 16:45:03 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-28 16:45:03 +0800
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 16:46:07 +0800
+Processing by AccountController#index as HTML
+  [1m[35mAccount Load (18.0ms)[0m  EXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'
+  Rendered account/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 922ms (Views: 903.1ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 17:16:57 +0800
+Processing by AccountController#index as HTML
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 19.0ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x0000000d6bf370>):
+  app/models/account.rb:2:in `<class:Account>'
+  app/models/account.rb:1:in `<top (required)>'
+  app/controllers/account_controller.rb:3:in `index'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (71.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 17:17:28 +0800
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 857ms (Views: 784.1ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:17:33 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 553ms (Views: 545.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:24:23 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (26.0ms)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @account, :url => { :controller => 'account', :action => 'create' } do |f| %>
+    2:     <%= f.label :FirstName, "First Name" %>
+    3:     <%= f.text_field :FirstName %>
+    4: 
+  app/views/account/new.html.erb:1:in `_app_views_account_new_html_erb__1152686943_116508340'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (696.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (728.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:25:28 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 239ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @account, :url => { :controller => 'account', :action => 'create' } do |f| %>
+    2:     <%= f.label :FirstName, "First Name" %>
+    3:     <%= f.text_field :FirstName %>
+    4: 
+  app/views/account/new.html.erb:1:in `_app_views_account_new_html_erb__1152686943_116508340'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (33.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (83.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:26:09 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @account, :url => { :controller => 'accounts', :action => 'create' } do |f| %>
+    2:     <%= f.label :FirstName, "First Name" %>
+    3:     <%= f.text_field :FirstName %>
+    4: 
+  app/views/account/new.html.erb:1:in `_app_views_account_new_html_erb__1152686943_107991420'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (76.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:27:12 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (255.0ms)
+Completed 200 OK in 1002ms (Views: 1001.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:28:46 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 799ms (Views: 797.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:29:10 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 767ms (Views: 766.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:29:26 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 628ms (Views: 628.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:30:23 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 716ms (Views: 715.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:30:53 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 801ms (Views: 801.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:31:24 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 665ms (Views: 665.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:31:34 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 615ms (Views: 614.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-08-28 17:31:51 +0800
+
+ActionController::RoutingError (No route matches [POST] "/account/create"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (71.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:37:43 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (28.0ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `accounts_path' for #<#<Class:0x0000000df13f30>:0x0000000d16cd50>):
+    1: <%= form_for Account.new do |f| %>
+    2:     <tr>
+    3:         <th><%= f.label :FirstName, "First Name" %></th>
+    4:         <th><%= f.text_field :FirstName %></th>
+  app/views/account/new.html.erb:1:in `_app_views_account_new_html_erb__1152686943_109820940'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (69.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:38:31 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (40.0ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `accounts_path' for #<#<Class:0x0000000df13f30>:0x0000000cb94ab8>):
+    1: <%= form_for @accounts do |f| %>
+    2:     <tr>
+    3:         <th><%= f.label :FirstName, "First Name" %></th>
+    4:         <th><%= f.text_field :FirstName %></th>
+  app/views/account/new.html.erb:1:in `_app_views_account_new_html_erb__1152686943_106723380'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (67.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:39:01 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 735ms (Views: 734.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-08-28 17:39:05 +0800
+
+ActionController::RoutingError (No route matches [POST] "/account/create"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (72.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:40:08 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 630ms (Views: 629.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-08-28 17:40:10 +0800
+
+ActionController::RoutingError (No route matches [POST] "/account/create"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (33.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (70.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:42:51 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 671ms (Views: 587.1ms | ActiveRecord: 16.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-08-28 17:43:07 +0800
+Processing by AccountController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0MYMvH1eamrc6nt1L66bAgfAulp9ANHpaxVFidfnC+bHhN8YVUYZ1fRp9auk2aPHGqa5v38H1aEkIwyEzUNRCw==", "account"=>{"FirstName"=>"Bryan", "LastName"=>"Chik", "Active"=>"1", "Location"=>"10", "Login"=>"bchik", "Debt"=>"10", "Need_Reminder"=>"1", "User_Gp"=>"HKIM"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/account_controller.rb:15:in `create'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (76.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 17:44:39 +0800
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (3.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 1980ms (Views: 1850.2ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 17:44:58 +0800
+Processing by AccountController#index as HTML
+  [1m[35mAccount Load (3.0ms)[0m  EXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'
+  Rendered account/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 586ms (Views: 582.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:45:00 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (135.0ms)
+Completed 200 OK in 629ms (Views: 622.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-08-28 17:45:15 +0800
+Processing by AccountController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Btswhzq9Jxfxib70SwtIcNgz5Nlh2Ww+VFeSC3N2IBoRmeMjEqVUqNkKMCrAfHC1xVXnPGPeaHYbYdsGadJ69w==", "account"=>{"FirstName"=>"Bryan", "LastName"=>"Chik", "Active"=>"1", "Location"=>"10", "Login"=>"bchik", "Debt"=>"10", "Need_Reminder"=>"yes", "User_Gp"=>"HKIM"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/account_controller.rb:15:in `create'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-08-28 17:47:07 +0800
+Processing by AccountController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Btswhzq9Jxfxib70SwtIcNgz5Nlh2Ww+VFeSC3N2IBoRmeMjEqVUqNkKMCrAfHC1xVXnPGPeaHYbYdsGadJ69w==", "account"=>{"FirstName"=>"Bryan", "LastName"=>"Chik", "Active"=>"1", "Location"=>"10", "Login"=>"bchik", "Debt"=>"10", "Need_Reminder"=>"yes", "User_Gp"=>"HKIM"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/account_controller.rb:15:in `create'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (68.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:47:27 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 803ms (Views: 803.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-08-28 17:47:33 +0800
+Processing by AccountController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XFr6zq4T8MFyZeoLhsX6Q4m4Up8UTnbdQJc74wHyG1ZLGClqhguDflrmZNUNssKGlN5RehZJcpUPoXLuG1ZBuw==", "account"=>{"FirstName"=>"Bryan", "LastName"=>"", "Active"=>"", "Location"=>"", "Login"=>"", "Debt"=>"", "Need_Reminder"=>"", "User_Gp"=>""}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/account_controller.rb:15:in `create'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (78.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 17:48:58 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 893ms (Views: 800.1ms | ActiveRecord: 17.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-08-28 17:49:13 +0800
+Processing by AccountController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B0o1InUjvtis5AqKgXbelJ/b8vV5Ob0ne7HvycUc1HMQCOaGXTvNZ4RnhFQKAeZRgr3xEHs+uW80h6bE37iOng==", "account"=>{"FirstName"=>"Bryan", "LastName"=>"Chik", "Active"=>"1", "Location"=>"10", "Login"=>"bchik", "Debt"=>"10", "Need_Reminder"=>"1", "User_Gp"=>"HKIM"}, "commit"=>"Create"}
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN TRANSACTION[0m
+  [1m[35mSQL (6.0ms)[0m  EXEC sp_executesql N'INSERT INTO [accounts] ([FirstName], [LastName], [Active], [Location], [Login], [Debt], [Need_Reminder], [User_Gp], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9)', N'@0 nvarchar(4000), @1 nvarchar(4000), @2 bit, @3 nvarchar(4000), @4 nvarchar(4000), @5 smallmoney, @6 bit, @7 int, @8 datetime, @9 datetime', @0 = N'Bryan', @1 = N'Chik', @2 = 1, @3 = N'10', @4 = N'bchik', @5 = 10.0, @6 = 1, @7 = 0, @8 = '08-28-2015 09:49:13.513', @9 = '08-28-2015 09:49:13.513'  [["FirstName", "Bryan"], ["LastName", "Chik"], ["Active", true], ["Location", "10"], ["Login", "bchik"], ["Debt", #<BigDecimal:ccd0af8,'0.1E2',9(18)>], ["Need_Reminder", true], ["User_Gp", 0], ["created_at", Fri, 28 Aug 2015 09:49:13 UTC +00:00], ["updated_at", Fri, 28 Aug 2015 09:49:13 UTC +00:00]]
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT TRANSACTION[0m
+Redirected to http://127.0.0.1:3000/account/index
+Completed 302 Found in 48ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 17:49:13 +0800
+Processing by AccountController#index as HTML
+  [1m[35mAccount Load (3.0ms)[0m  EXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'
+  Rendered account/index.html.erb within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 3.0ms)
+
+ActionView::Template::Error (undefined method `to' for #<#<Class:0x00000008bbfa78>:0x0000000cd53e58>):
+    27:         <td><%= account.User_Gp %></td>
+    28:         <td><%= account.created_at %></td>
+    29:         <td><%= account.updated_at %></td>
+    30:         <td><%= link to 'Show', account %></td>
+    31:         <td><%= link to 'Destroy', account, confirm: 'Are you sure?',method: :delete %></td>
+    32:       </tr>
+    33:   <% end %>
+  app/views/account/index.html.erb:30:in `block in _app_views_account_index_html_erb___114742909_79465260'
+  app/views/account/index.html.erb:18:in `_app_views_account_index_html_erb___114742909_79465260'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (77.0ms)
+
+
+Started POST "/account/console/repl_sessions/aa5e738724e7e95156ccf01a81930263/trace" for 127.0.0.1 at 2015-08-28 17:52:42 +0800
+
+
+Started POST "/account/console/repl_sessions/aa5e738724e7e95156ccf01a81930263/trace" for 127.0.0.1 at 2015-08-28 17:52:45 +0800
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 17:55:44 +0800
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (undefined method `to' for #<#<Class:0x00000008bbfa78>:0x0000000dec3d00>):
+    25:         <td><%= account.Debt %></td>
+    26:         <td><%= account.Need_Reminder %></td>
+    27:         <td><%= account.User_Gp %></td>
+    28:         <td><%= link to 'Show', account %></td>
+    29:         <td><%= link to 'Destroy', account, confirm: 'Are you sure?',method: :delete %></td>
+    30:       </tr>
+    31:   <% end %>
+  app/views/account/index.html.erb:28:in `block in _app_views_account_index_html_erb___114742909_116790280'
+  app/views/account/index.html.erb:18:in `_app_views_account_index_html_erb___114742909_116790280'
+
+
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (73.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 18:12:08 +0800
+Processing by AccountController#index as HTML
+  [1m[35mAccount Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'
+  Rendered account/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 675ms (Views: 672.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-08-28 18:12:13 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 492ms (Views: 492.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-08-28 18:12:35 +0800
+Processing by AccountController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PVbbOZFVGOYnv7It1S2yzzhNYLdMAlyqXZofn9UeQYUqFAiduU1rWQ88PPNeWooKJStjUk4FWOISrFaSz7obaA==", "account"=>{"FirstName"=>"Samuel", "LastName"=>"Lee", "Active"=>"1", "Location"=>"10", "Login"=>"salee", "Debt"=>"-999", "Need_Reminder"=>"1", "User_Gp"=>"HKIM"}, "commit"=>"Create"}
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN TRANSACTION[0m
+  [1m[35mSQL (2.0ms)[0m  EXEC sp_executesql N'INSERT INTO [accounts] ([FirstName], [LastName], [Active], [Location], [Login], [Debt], [Need_Reminder], [User_Gp], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9)', N'@0 nvarchar(4000), @1 nvarchar(4000), @2 bit, @3 nvarchar(4000), @4 nvarchar(4000), @5 smallmoney, @6 bit, @7 int, @8 datetime, @9 datetime', @0 = N'Samuel', @1 = N'Lee', @2 = 1, @3 = N'10', @4 = N'salee', @5 = -999.0, @6 = 1, @7 = 0, @8 = '08-28-2015 10:12:35.742', @9 = '08-28-2015 10:12:35.742'  [["FirstName", "Samuel"], ["LastName", "Lee"], ["Active", true], ["Location", "10"], ["Login", "salee"], ["Debt", #<BigDecimal:6709d50,'-0.999E3',9(18)>], ["Need_Reminder", true], ["User_Gp", 0], ["created_at", Fri, 28 Aug 2015 10:12:35 UTC +00:00], ["updated_at", Fri, 28 Aug 2015 10:12:35 UTC +00:00]]
+  [1m[36mSQL (4.0ms)[0m  [1mCOMMIT TRANSACTION[0m
+Redirected to http://127.0.0.1:3000/account/index
+Completed 302 Found in 19ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 18:12:35 +0800
+Processing by AccountController#index as HTML
+  [1m[35mAccount Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'
+  Rendered account/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 678ms (Views: 676.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 18:14:21 +0800
+  [1m[36mSQL (1.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 1768ms (Views: 1672.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 18:14:37 +0800
+Processing by AccountController#index as HTML
+  [1m[35mAccount Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'
+  Rendered account/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 537ms (Views: 535.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 18:14:40 +0800
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 542ms (Views: 540.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-08-28 18:15:01 +0800
+Processing by AccountController#index as HTML
+  [1m[35mAccount Load (1.0ms)[0m  EXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'
+  Rendered account/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 782ms (Views: 780.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-02 10:09:48 +0800
+  [1m[36mSQL (1.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (6.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (5.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 2073ms (Views: 1994.2ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/account.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-02 10:10:03 +0800
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-09-02 10:10:04 +0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-09-02 10:10:04 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-09-02 10:10:04 +0800
+
+
+Started GET "/assets/account.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-02 10:10:04 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-09-02 10:10:04 +0800
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-09-02 10:10:28 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 505ms (Views: 503.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-09-02 10:10:59 +0800
+Processing by AccountController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7tjRIF8oFl7zyxufe6ITyUVVMA8HyUfFKUHAuljzMfCu3v0U0L7gxADVsLcmZVUVOutztCF7G+oBlRT8xBBVzw==", "account"=>{"FirstName"=>"ja", "LastName"=>"sai", "Active"=>"", "Location"=>"toilet", "Login"=>"", "Debt"=>"100", "Need_Reminder"=>"", "User_Gp"=>""}, "commit"=>"Create"}
+  [1m[35mSQL (3.0ms)[0m  BEGIN TRANSACTION
+  [1m[36mSQL (7.0ms)[0m  [1mEXEC sp_executesql N'INSERT INTO [accounts] ([FirstName], [LastName], [Location], [Login], [Debt], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (@0, @1, @2, @3, @4, @5, @6)', N'@0 nvarchar(4000), @1 nvarchar(4000), @2 nvarchar(4000), @3 nvarchar(4000), @4 smallmoney, @5 datetime, @6 datetime', @0 = N'ja', @1 = N'sai', @2 = N'toilet', @3 = N'', @4 = 100.0, @5 = '09-02-2015 02:10:59.569', @6 = '09-02-2015 02:10:59.569'[0m  [["FirstName", "ja"], ["LastName", "sai"], ["Location", "toilet"], ["Login", ""], ["Debt", #<BigDecimal:d54f288,'0.1E3',9(18)>], ["created_at", Wed, 02 Sep 2015 02:10:59 UTC +00:00], ["updated_at", Wed, 02 Sep 2015 02:10:59 UTC +00:00]]
+  [1m[35mSQL (2.0ms)[0m  COMMIT TRANSACTION
+Redirected to http://localhost:3000/account/index
+Completed 302 Found in 41ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-09-02 10:10:59 +0800
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (3.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 448ms (Views: 443.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-09-02 10:33:39 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 512ms (Views: 512.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-09-02 11:03:28 +0800
+  [1m[36mSQL (1.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (3.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (3.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 2063ms (Views: 1941.6ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/account/new" for 127.0.0.1 at 2015-09-02 11:04:01 +0800
+Processing by AccountController#new as HTML
+  Rendered account/new.html.erb within layouts/application (147.0ms)
+Completed 200 OK in 916ms (Views: 914.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/account/create" for 127.0.0.1 at 2015-09-02 11:04:13 +0800
+Processing by AccountController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZEGIMmjsjn10PxtJFNvxMFENUwlCz40g9J31n7yZNGFUgpYO7UQWATgx+wRayrgjJT9OES+axq5YejDVExDruA==", "account"=>{"FirstName"=>"di", "LastName"=>"di", "Active"=>"fs", "Location"=>"asdf", "Login"=>"sdf", "Debt"=>"sadfas", "Need_Reminder"=>"sadfasdf", "User_Gp"=>"asdfsadf"}, "commit"=>"Create"}
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` ("fs") to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from create at F:/Public/Development (lunch program)/app/controllers/account_controller.rb:15)
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` ("sadfasdf") to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from create at F:/Public/Development (lunch program)/app/controllers/account_controller.rb:15)
+  [1m[35mSQL (2.0ms)[0m  BEGIN TRANSACTION
+  [1m[36mSQL (6.0ms)[0m  [1mEXEC sp_executesql N'INSERT INTO [accounts] ([FirstName], [LastName], [Active], [Location], [Login], [Debt], [Need_Reminder], [User_Gp], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9)', N'@0 nvarchar(4000), @1 nvarchar(4000), @2 bit, @3 nvarchar(4000), @4 nvarchar(4000), @5 smallmoney, @6 bit, @7 int, @8 datetime, @9 datetime', @0 = N'di', @1 = N'di', @2 = 0, @3 = N'asdf', @4 = N'sdf', @5 = 0.0, @6 = 0, @7 = 0, @8 = '09-02-2015 03:04:13.78', @9 = '09-02-2015 03:04:13.78'[0m  [["FirstName", "di"], ["LastName", "di"], ["Active", false], ["Location", "asdf"], ["Login", "sdf"], ["Debt", #<BigDecimal:bea5b68,'0.0',9(18)>], ["Need_Reminder", false], ["User_Gp", 0], ["created_at", Wed, 02 Sep 2015 03:04:13 UTC +00:00], ["updated_at", Wed, 02 Sep 2015 03:04:13 UTC +00:00]]
+  [1m[35mSQL (3.0ms)[0m  COMMIT TRANSACTION
+Redirected to http://127.0.0.1:3000/account/index
+Completed 302 Found in 55ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2015-09-02 11:04:13 +0800
+Processing by AccountController#index as HTML
+  [1m[36mAccount Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
+  Rendered account/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 714ms (Views: 711.2ms | ActiveRecord: 2.0ms)

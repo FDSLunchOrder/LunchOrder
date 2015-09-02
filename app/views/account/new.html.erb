@@ -1,0 +1,31 @@
+<%= form_for @accounts, :url => { :controller => 'account', :action => 'create' } do |f| %>
+    <tr>
+        <th><%= f.label :FirstName, "First Name" %></th>
+        <th><%= f.text_field :FirstName %></th>
+    </tr>
+
+    <tr>
+        <th><%= f.label :LastName, "Last Name" %></th>
+        <th><%= f.text_field :LastName %></th>
+    </tr>
+
+    <%= f.label :Active, "Active" %>
+    <%= f.text_field :Active %>
+
+    <%= f.label :Location, "Location" %>
+    <%= f.text_field :Location %>
+
+    <%= f.label :Login, "Login" %>
+    <%= f.text_field :Login %>
+
+    <%= f.label :Debt, "Debt" %>
+    <%= f.text_field :Debt %>
+
+    <%= f.label :Need_Reminder, "Need Reminder?" %>
+    <%= f.text_field :Need_Reminder %>
+
+    <%= f.label :User_Gp, "User Group" %>
+    <%= f.text_field :User_Gp %>
+
+    <%= f.submit "Create" %>
+<% end %>

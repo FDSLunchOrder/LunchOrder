@@ -1,0 +1,32 @@
+<h1>Listing Accounts</h1>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Active</th>
+    <th>Location</th>
+    <th>Login</th>
+    <th>Debt</th>
+    <th>Need Reminder</th>
+    <th>User Group</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.FirstName %></td>
+        <td><%= account.LastName %></td>
+        <td><%= account.Active %></td>
+        <td><%= account.Location %></td>
+        <td><%= account.Login %></td>
+        <td><%= account.Debt %></td>
+        <td><%= account.Need_Reminder %></td>
+        <td><%= account.User_Gp %></td>
+      </tr>
+  <% end %>
+</table>
+<br />
+
+<%= link_to 'New Account', :controller => 'account', :action => 'new' %>
+
