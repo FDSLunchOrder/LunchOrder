@@ -1338,3 +1338,71 @@ Processing by AccountController#index as HTML
   [1m[36mAccount Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [accounts].* FROM [accounts]'[0m
   Rendered account/index.html.erb within layouts/application (5.0ms)
 Completed 200 OK in 714ms (Views: 711.2ms | ActiveRecord: 2.0ms)
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (4.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'[0m
+  [1m[35m (58.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''account'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''accounts'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'account', NULL
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'accounts', NULL[0m
+  [1m[35mExecute Procedure (3.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL
+  [1m[36mExecute Procedure (1.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL
+  [1m[36mExecute Procedure (1.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL[0m
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''
+  [1m[36m (2.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''account'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''accounts'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'account', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'accounts', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL[0m
+  [1m[36mSQL (2.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''
+  [1m[36m (5.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''account'''[0m
+  [1m[35m (2.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''accounts'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (2.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'account', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'accounts', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL[0m
+  [1m[36mSQL (1.0ms)[0m  [1mUSE [LunchOrder_Dev][0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  EXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mEXEC sp_executesql N'SELECT [schema_migrations].* FROM [schema_migrations]'[0m
+  [1m[35m (3.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''Daily_Balance'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''account'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''accounts'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''foods'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''order_histories'''
+  [1m[36m (3.0ms)[0m  [1mEXEC sp_executesql N'EXEC sp_helpindex N''restaurants'''[0m
+  [1m[35m (4.0ms)[0m  EXEC sp_executesql N'EXEC sp_helpindex N''sysdiagrams'''
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'Daily_Balance', NULL[0m
+  [1m[35mExecute Procedure (2.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'account', NULL
+  [1m[36mExecute Procedure (3.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'accounts', NULL[0m
+  [1m[35mExecute Procedure (3.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'foods', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'order_histories', NULL[0m
+  [1m[35mExecute Procedure (3.0ms)[0m  EXEC sp_fkeys NULL, NULL, NULL, N'restaurants', NULL
+  [1m[36mExecute Procedure (2.0ms)[0m  [1mEXEC sp_fkeys NULL, NULL, NULL, N'sysdiagrams', NULL[0m
